@@ -25,7 +25,8 @@ parser.add_argument("--memory_size", default=100, type=int)     # size of the me
 parser.add_argument("--hidden_dim", default=100, type=int)      # size of the hidden layer                 
 parser.add_argument('--lr',default=1e-3, type=float)  
 parser.add_argument('--n_tasks',default=15, type=int)  
-parser.add_argument('--workers',default=2, type=int) 
+# parser.add_argument('--workers',default=2, type=int) 
+parser.add_argument('--workers',default=1, type=int) 
 parser.add_argument('--eval_freq',default=1000, type=int) 
 
 ## Methods parameters
@@ -35,7 +36,8 @@ parser.add_argument("--all_features",default=0, type=int) # Leave it to 0, this 
 parser.add_argument('--dataset_root_path',default=" ", type=str,help="path to your dataset  ex: /home/usr/datasets/")
 parser.add_argument('--subset_size',default=1000, type=int, help="number of samples per class, ex: for MNIST, \
             subset_size=1000 wil results in a dataset of total size 10,000") 
-parser.add_argument('--dataset',default="split_cifar", type=str)
+# parser.add_argument('--dataset',default="split_cifar", type=str)
+parser.add_argument('--dataset',default="permuted", type=str)
 parser.add_argument("--is_split", action="store_true")
 parser.add_argument('--first_split_size',default=5, type=int) 
 parser.add_argument('--other_split_size',default=5, type=int)
